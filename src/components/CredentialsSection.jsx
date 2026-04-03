@@ -1,6 +1,6 @@
 export default function CredentialsSection() {
   const stats = [
-    { target: 1500, suffix: "+", label: "Avg. Tutor SAT Score",  prefix: "" },
+    { target: 1530, suffix: "+", label: "Avg. Tutor SAT Score",  prefix: "" },
     { target: 5,    suffix: "/5", label: "AP Exam Score Average", prefix: "" },
     { target: 1,    suffix: "%",  label: "Class Rank",            prefix: "Top " },
   ];
