@@ -583,7 +583,7 @@ function HeroSection() {
 
       <div style={{ position:"relative",zIndex:10,textAlign:"center",maxWidth:820,padding:"0 40px" }}>
         <h1 style={{ fontFamily:"'Inter',sans-serif", fontSize:"clamp(52px,8.5vw,110px)", fontWeight:900, letterSpacing:"-4px", lineHeight:1.0, margin:"0 0 24px 0", opacity:vis1?1:0, transform:vis1?"translateY(0)":"translateY(36px)", transition:"all 0.9s cubic-bezier(0.25,0.4,0.25,1)" }}>
-          <span style={{ display:"block", color:"#1A0F0A" }}>Top 1% Tutors.</span>
+          <span style={{ display:"block", color:"#1A0F0A" }}>Top Scorers.</span>
           <span style={{ display:"block", color:"#8B1A1A" }}>Real Results.</span>
         </h1>
         <p style={{ fontFamily:"'Inter',sans-serif", fontSize:"clamp(15px,2vw,18px)", fontWeight:400, color:"#6B4C3A", lineHeight:1.7, maxWidth:460, margin:"0 auto 36px", opacity:vis2?1:0, transform:vis2?"translateY(0)":"translateY(20px)", transition:"all 0.9s cubic-bezier(0.25,0.4,0.25,1) 0.15s" }}>
