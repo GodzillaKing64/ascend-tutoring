@@ -1,12 +1,32 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8B1A1A;
+  --color-primary-dark: #7A1515;
+  --color-site-bg: #FAFAF9;
+  --color-warm: #F0E8E0;
+  --color-cream: #F7F2EE;
+  --color-dark: #1A0F0A;
+  --color-text-warm: #6B4C3A;
+  --color-text-muted: #9C7060;
+  --color-text-light: #B0957F;
+  --color-border: #EDE5DC;
+  --color-accent-green: #1A5C32;
+  --color-card-dark: #111010;
+  --font-sans: 'Inter', sans-serif;
 }
 
-body {
-  margin: 0;
-  font-family: 'Noto Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@keyframes navSlide {
+  from { opacity: 0; transform: translateY(-100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.nav-anim {
+  animation: navSlide 0.5s ease forwards;
+}
+
+.nav-btn:hover {
+  background: rgba(139, 26, 26, 0.06) !important;
+  color: #8B1A1A !important;
 }

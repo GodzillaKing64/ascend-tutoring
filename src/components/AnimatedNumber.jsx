@@ -1,3 +1,5 @@
+import { useState, useRef, useEffect } from "react";
+
 export default function AnimatedNumber({ target, suffix = "" }) {
   const [val, setVal] = useState(0);
   const [started, setStarted] = useState(false);

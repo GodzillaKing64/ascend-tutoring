@@ -1,4 +1,4 @@
-import React from "react";
+import { useRef, useEffect } from "react";
 
 export default function GlowCard({ children, className = "", glowColor = "red" }) {
   const cardRef = useRef(null);
@@ -30,7 +30,7 @@ export default function GlowCard({ children, className = "", glowColor = "red" }
       <div
         ref={cardRef}
         data-glow
-        className={className}
+        className={`relative touch-none rounded-[16px] ${className}`}
         style={{
           "--base": base, "--spread": spread, "--radius": "16", "--border": "2",
           "--backdrop": "hsl(0 0% 98% / 0.85)", "--backup-border": "rgba(139,26,26,0.12)",
@@ -43,12 +43,9 @@ export default function GlowCard({ children, className = "", glowColor = "red" }
           backgroundPosition: "50% 50%",
           backgroundAttachment: "fixed",
           border: "var(--border-size) solid var(--backup-border)",
-          position: "relative",
-          touchAction: "none",
-          borderRadius: 16,
         }}
       >
-        <div data-glow style={{ position:"absolute",inset:0,borderRadius:16,pointerEvents:"none" }} />
+        <div data-glow className="absolute inset-0 rounded-[16px] pointer-events-none" />
         {children}
       </div>
     </>
