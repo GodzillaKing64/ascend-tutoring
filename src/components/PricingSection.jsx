@@ -103,7 +103,7 @@ export default function PricingSection() {
             onClick={scrollToContact}
             className="shrink-0 px-6 py-2.5 rounded-full text-[13px] font-bold text-primary border border-primary/30 bg-primary/[0.05] cursor-pointer transition-all duration-200 hover:bg-primary/[0.10] whitespace-nowrap"
           >
-            Book Free Session →
+            Book Free Consulting Session →
           </button>
         </div>
 
