@@ -79,7 +79,7 @@ export default function TeamCard({ member }) {
           {member.name}
         </div>
         <div className="text-[10px] text-white/[0.38] font-medium mt-[3px] tracking-[0.6px] uppercase">
-          Ascend Tutor
+          {member.role}
         </div>
       </div>
     </div>
