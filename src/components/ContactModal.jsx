@@ -139,6 +139,8 @@ export default function ContactModal({ open, onClose }) {
                 value={form.phone}
                 onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
                 placeholder="(555) 000-0000"
+                pattern="[\+]?[\d\s\-\(\)]{10,15}"
+                title="Please enter a valid phone number (10–15 digits)"
                 className="w-full px-4 py-2.5 rounded-[10px] text-[14px] text-dark border border-[#D5C9BE] outline-none focus:border-primary transition-colors"
                 style={{ background: "#FAFAF9" }}
               />
