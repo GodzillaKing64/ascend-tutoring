@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ElegantShape from "./ElegantShape";
 
-export default function HeroSection() {
+export default function HeroSection({ onOpenModal }) {
   const [vis1, setVis1] = useState(false);
   const [vis2, setVis2] = useState(false);
 
@@ -10,8 +10,6 @@ export default function HeroSection() {
     const t2 = setTimeout(() => setVis2(true), 500);
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
-
-  const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <div className="min-h-screen bg-site-bg flex items-center justify-center overflow-hidden relative">
@@ -62,7 +60,7 @@ export default function HeroSection() {
 
         <div style={{ opacity: vis2 ? 1 : 0, transition: "opacity 0.9s ease 0.3s" }}>
           <button
-            onClick={() => scrollTo("contact")}
+            onClick={onOpenModal}
             className="text-[15px] font-bold text-white bg-primary border-none px-[34px] py-[14px] rounded-full cursor-pointer tracking-[-0.1px] shadow-[0_4px_20px_rgba(139,26,26,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(139,26,26,0.42)]"
           >
             Book a Free Consulting Session →

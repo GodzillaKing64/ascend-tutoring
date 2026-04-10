@@ -1,7 +1,6 @@
 import { PRICING } from "../data/pricing";
 
-export default function PricingSection() {
-  const scrollToContact = () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+export default function PricingSection({ onOpenModal }) {
 
   return (
     <section id="pricing" className="bg-cream px-5 md:px-10 py-20 pb-24">
@@ -77,7 +76,7 @@ export default function PricingSection() {
                 </div>
 
                 <button
-                  onClick={scrollToContact}
+                  onClick={onOpenModal}
                   className="w-full py-3.5 text-[14px] font-semibold cursor-pointer rounded-[10px] transition-all duration-200 hover:-translate-y-0.5"
                   style={{
                     border: plan.featured ? "none" : "1.5px solid #D5C9BE",
@@ -100,7 +99,7 @@ export default function PricingSection() {
             <div className="text-[13px] text-text-warm">Every student gets a free intro session — no commitment, no pressure.</div>
           </div>
           <button
-            onClick={scrollToContact}
+            onClick={onOpenModal}
             className="shrink-0 px-6 py-2.5 rounded-full text-[13px] font-bold text-primary border border-primary/30 bg-primary/[0.05] cursor-pointer transition-all duration-200 hover:bg-primary/[0.10] whitespace-nowrap"
           >
             Book Free Consulting Session →
