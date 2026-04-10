@@ -19,13 +19,13 @@ export default function ContactSection({ onOpenModal }) {
       <div className="bg-white rounded-2xl border border-[#EDE5DC] shadow-[0_4px_24px_rgba(42,26,16,0.06)] px-8 py-10 max-w-[480px]">
         <div className="flex flex-col gap-4 mb-8">
           {[
-            ["Location", "Sugar Land, TX · In-person or online"],
-            ["Phone", "(346) 391-4081"],
-            ["Response", "We respond within 24 hours"],
-          ].map(([label, text]) => (
+            ["📍", "Sugar Land, TX · In-person or online"],
+            ["📞", "(346) 391-4081"],
+            ["⏱️", "We respond within 24 hours"],
+          ].map(([icon, text]) => (
             <div key={text} className="flex gap-3 items-center text-[14px] text-[#5C3D2A]">
-              <div className="w-9 h-9 bg-[#F5EDE8] rounded-lg flex items-center justify-center shrink-0 border border-primary/10">
-                <span className="text-[10px] font-bold text-primary uppercase tracking-[0.5px]">{label.slice(0,3)}</span>
+              <div className="w-9 h-9 bg-[#F5EDE8] rounded-lg flex items-center justify-center text-base shrink-0 border border-primary/10">
+                {icon}
               </div>
               {text}
             </div>
