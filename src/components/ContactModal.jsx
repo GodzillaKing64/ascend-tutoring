@@ -109,7 +109,7 @@ export default function ContactModal({ open, onClose }) {
           </button>
           <div className="text-[11px] font-bold tracking-[2px] uppercase text-primary mb-1">Get Started</div>
           <h2 className="font-black text-dark" style={{ fontSize: 22, letterSpacing: "-0.8px" }}>
-            Book a Free Consulting Session
+            Book a Consulting Session
           </h2>
           <p className="text-[13px] text-text-warm mt-1">We'll reach out within 24 hours to set things up.</p>
         </div>

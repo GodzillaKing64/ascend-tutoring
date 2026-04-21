@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import TeamSection from "./components/TeamSection";
 import CredentialsSection from "./components/CredentialsSection";
+import TestimonialsSection from "./components/TestimonialsSection";
 import HowItWorksSection from "./components/HowItWorks";
 import PricingSection from "./components/PricingSection";
 import ContactSection from "./components/ContactSection";
@@ -19,6 +20,7 @@ export default function AscendTutoring() {
       <HeroSection onOpenModal={openModal} />
       <TeamSection />
       <CredentialsSection />
+      <TestimonialsSection/>
       <HowItWorksSection />
       <PricingSection onOpenModal={openModal} />
       <ContactSection onOpenModal={openModal} />

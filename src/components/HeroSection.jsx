@@ -63,7 +63,7 @@ export default function HeroSection({ onOpenModal }) {
             onClick={onOpenModal}
             className="text-[15px] font-bold text-white bg-primary border-none px-[34px] py-[14px] rounded-full cursor-pointer tracking-[-0.1px] shadow-[0_4px_20px_rgba(139,26,26,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(139,26,26,0.42)]"
           >
-            Book a Free Consulting Session →
+            Book a Consulting Session →
           </button>
         </div>
       </div>

@@ -12,7 +12,7 @@ export default function ContactSection({ onOpenModal }) {
         Ready to start?
       </h2>
       <p className="text-[15px] text-text-warm leading-[1.75] mb-10 max-w-[500px]">
-        Fill out our interest form and one of us will reach out within 24 hours to set up a free consulting session. No pressure — just a conversation about your goals.
+        Fill out our interest form and one of us will reach out within 24 hours to set up a consulting session. No pressure — just a conversation about your goals.
       </p>
 
       {/* CTA card */}
