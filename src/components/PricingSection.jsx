@@ -181,8 +181,8 @@ export default function PricingSection({ onOpenModal }) {
                     <div className="text-[11px] font-bold uppercase tracking-[1.5px] text-text-muted mb-1">
                       Contact for Details
                     </div>
-                    <a href="tel:3463914081" className="text-[15px] font-bold text-primary">
-                      346-391-4081
+                    <a href="tel:8327594385" className="text-[15px] font-bold text-primary">
+                      832-759-4385
                     </a>
                   </div>
                 </div>
