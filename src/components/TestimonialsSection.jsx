@@ -21,10 +21,10 @@ const testimonials = [
 ,
   },
   {
-    name: "Krishiv Khandelia",
-    meta: "Sugar Land — SAT Prep",
+    name: "Connor Jin",
+    meta: "Sugar Land — SAT Reading",
     quote:
-      "Ascend made test prep feel manageable. My tutor broke down every concept in a way that actually stuck, and I saw real improvement by my second practice test. Highly recommend to anyone serious about their score.",
+      "Nathan Fei my tutor was a thorough teacher and shared a lot of factors with me, which really improved my understanding of the subject. I was lucky to be able to be educated from him.",
   },
 ];
 
