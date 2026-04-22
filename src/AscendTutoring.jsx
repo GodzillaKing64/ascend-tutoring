@@ -20,9 +20,9 @@ export default function AscendTutoring() {
       <HeroSection onOpenModal={openModal} />
       <TeamSection />
       <CredentialsSection />
+      <TestimonialsSection />
       <HowItWorksSection />
       <PricingSection onOpenModal={openModal} />
-      <TestimonialsSection />
       <ContactSection onOpenModal={openModal} />
       <Footer />
       <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />

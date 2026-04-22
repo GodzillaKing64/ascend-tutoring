@@ -202,6 +202,7 @@ export default function TestimonialsSection() {
 
   return (
     <section
+      id="testimonials"
       ref={sectionRef}
       style={{
         background: "#f5f0ed",

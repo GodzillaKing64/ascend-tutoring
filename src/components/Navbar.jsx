@@ -4,6 +4,7 @@ import { NEW_LOGO } from "../data/logo";
 const NAV_LINKS = [
   ["team", "Team"],
   ["credentials", "Credentials"],
+  ["testimonials", "Testimonials"],
   ["how-it-works", "How It Works"],
   ["pricing", "Pricing"],
   ["contact", "Contact"],
