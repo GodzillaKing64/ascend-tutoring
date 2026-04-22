@@ -5,6 +5,7 @@ import TeamSection from "./components/TeamSection";
 import CredentialsSection from "./components/CredentialsSection";
 import HowItWorksSection from "./components/HowItWorks";
 import PricingSection from "./components/PricingSection";
+import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import ContactModal from "./components/ContactModal";
@@ -21,6 +22,7 @@ export default function AscendTutoring() {
       <CredentialsSection />
       <HowItWorksSection />
       <PricingSection onOpenModal={openModal} />
+      <TestimonialsSection />
       <ContactSection onOpenModal={openModal} />
       <Footer />
       <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />

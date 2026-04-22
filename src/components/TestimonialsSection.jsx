@@ -267,6 +267,90 @@ export default function TestimonialsSection() {
         {testimonials.map((t, i) => (
           <TestimonialCard key={i} data={t} position={getPosition(i)} />
         ))}
+
+        {/* Prev arrow */}
+        <button
+          onClick={goPrev}
+          style={{
+            position: "absolute",
+            left: "-48px",
+            top: "50%",
+            transform: "translateY(-50%)",
+            background: "#ffffff",
+            border: "1px solid #e8e0db",
+            borderRadius: "50%",
+            width: "40px",
+            height: "40px",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+            zIndex: 10,
+            fontSize: "18px",
+            color: "#8B1A1A",
+          }}
+          aria-label="Previous testimonial"
+        >
+          ‹
+        </button>
+
+        {/* Next arrow */}
+        <button
+          onClick={goNext}
+          style={{
+            position: "absolute",
+            right: "-48px",
+            top: "50%",
+            transform: "translateY(-50%)",
+            background: "#ffffff",
+            border: "1px solid #e8e0db",
+            borderRadius: "50%",
+            width: "40px",
+            height: "40px",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+            zIndex: 10,
+            fontSize: "18px",
+            color: "#8B1A1A",
+          }}
+          aria-label="Next testimonial"
+        >
+          ›
+        </button>
+      </div>
+
+      {/* Dot indicators */}
+      <div
+        style={{
+          ...fadeStyle,
+          transitionDelay: "0.2s",
+          display: "flex",
+          justifyContent: "center",
+          gap: "8px",
+          marginTop: "32px",
+        }}
+      >
+        {testimonials.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            style={{
+              width: i === current ? "24px" : "8px",
+              height: "8px",
+              borderRadius: "4px",
+              background: i === current ? "#8B1A1A" : "#d0c8c2",
+              border: "none",
+              cursor: "pointer",
+              padding: 0,
+              transition: "width 0.3s ease, background 0.3s ease",
+            }}
+            aria-label={`Go to testimonial ${i + 1}`}
+          />
+        ))}
       </div>
     </section>
   );
