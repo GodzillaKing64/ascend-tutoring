@@ -4,16 +4,15 @@ import HeroSection from "./components/HeroSection";
 import TeamSection from "./components/TeamSection";
 import CredentialsSection from "./components/CredentialsSection";
 import HowItWorksSection from "./components/HowItWorks";
+import PartnersSection from "./components/PartnersSection";
 import PricingSection from "./components/PricingSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import ContactModal from "./components/ContactModal";
-
 export default function AscendTutoring() {
   const [modalOpen, setModalOpen] = useState(false);
   const openModal = () => setModalOpen(true);
-
   return (
     <div className="font-sans bg-site-bg text-dark">
       <Navbar />
@@ -22,6 +21,7 @@ export default function AscendTutoring() {
       <CredentialsSection />
       <TestimonialsSection />
       <HowItWorksSection />
+      <PartnersSection />
       <PricingSection onOpenModal={openModal} />
       <ContactSection onOpenModal={openModal} />
       <Footer />
