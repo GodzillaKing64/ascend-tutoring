@@ -1,0 +1,108 @@
+import { useState, useEffect, useRef } from "react";
+import ElegantShape from "./ElegantShape";
+
+const partners = [
+  {
+    name: "The Arc of Fort Bend County",
+    logo: "/images/partners/arc-fort-bend.png",
+  },
+  {
+    name: "GiGi's Playhouse Sugar Land",
+    logo: "/images/partners/gigis-playhouse.png",
+  },
+];
+
+export default function PartnersSection() {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className="relative overflow-hidden bg-site-bg py-24 px-7"
+    >
+      {/* Background radial gradient, consistent with HeroSection */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 88% 20%,rgba(139,26,26,0.03),transparent 65%)",
+        }}
+      />
+      <ElegantShape
+        delay={0.2}
+        width={260}
+        height={64}
+        rotate={-10}
+        color="rgba(139,26,26,0.05)"
+        style={{ right: "4%", top: "6%" }}
+        className="hidden md:block"
+      />
+
+      <div className="relative z-10 max-w-[760px] mx-auto text-center">
+        <h2
+          className="font-black leading-tight mb-4 transition-all duration-[900ms]"
+          style={{
+            fontSize: "clamp(30px,4.5vw,44px)",
+            letterSpacing: "-1.5px",
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(24px)",
+            transition: "all 0.9s cubic-bezier(0.25,0.4,0.25,1)",
+          }}
+        >
+          <span className="text-dark">Partnering with </span>
+          <span className="text-primary">local organizations</span>
+        </h2>
+        <p
+          className="text-text-warm leading-[1.7] max-w-[480px] mx-auto mb-12"
+          style={{
+            fontSize: "clamp(15px,2vw,17px)",
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(16px)",
+            transition: "all 0.9s cubic-bezier(0.25,0.4,0.25,1) 0.1s",
+          }}
+        >
+          We work with organizations around Fort Bend County to bring free tutoring to more students who need it.
+        </p>
+
+        <div className="flex flex-wrap items-center justify-center gap-6">
+          {partners.map((p, i) => (
+            <div
+              key={p.name}
+              className="bg-white rounded-2xl px-10 py-8 flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
+              style={{
+                width: "240px",
+                height: "160px",
+                boxShadow: "0 4px 24px rgba(139,26,26,0.08)",
+                opacity: visible ? 1 : 0,
+                transform: visible ? "translateY(0)" : "translateY(20px)",
+                transition: `all 0.9s cubic-bezier(0.25,0.4,0.25,1) ${0.2 + i * 0.12}s`,
+              }}
+            >
+              <img
+                src={p.logo}
+                alt={p.name}
+                className="max-w-full max-h-full object-contain"
+                style={{ maxHeight: "100px" }}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
